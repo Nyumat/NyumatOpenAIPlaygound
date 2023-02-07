@@ -1,10 +1,22 @@
+import Layout from "../components/Layout";
+import UserFetch from "../components/UserFetch";
+import Home from "../pages/Home";
+import UserHome from "../pages/UserHome";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-screen">
-      <h1>My React App</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/user" element={<UserHome />}/>
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </>
   );
 };
 
