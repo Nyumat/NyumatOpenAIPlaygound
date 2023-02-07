@@ -42,3 +42,16 @@ app.get("/api/user", async (req, res) => {
             name: "Tom",
       });
 });
+
+app.post("/api/login", async (req, res) => {
+      const { username, pin } = req.body;
+      if (username === "tom" && pin === "123") {
+            res.status(200).json({
+                  message: "Logged in successfully",
+            });
+      } else {
+            res.status(401).json({
+                  message: "Invalid username or password",
+            });
+      }
+});
