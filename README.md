@@ -35,7 +35,7 @@ Start the dev server (from the root directory):
 
 ```zsh
 cd backend && npm run dev
-cd  frontend && npm run dev
+cd frontend && npm run dev
 ```
 
 Now you're good to go!
