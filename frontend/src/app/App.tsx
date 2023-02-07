@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
-import UserFetch from "../components/UserFetch";
 import Home from "../pages/Home";
-import UserHome from "../pages/UserHome";
+import Intro from "../pages/Intro";
+import Login from "../pages/Login";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -11,8 +11,9 @@ const App = () => {
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/user" element={<UserHome />}/>
+            <Route path="/" element={<Home />}/>
+            <Route path="/intro" element={<Intro />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </Layout>
       </BrowserRouter>
